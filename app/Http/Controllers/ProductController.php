@@ -13,7 +13,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-        return view('products.index');
+        return view('products.index');//->with('info','Bienvenidos a la session de productos');
     }
 
     /**
