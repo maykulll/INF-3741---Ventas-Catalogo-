@@ -25,6 +25,11 @@ class CreateProductsTable extends Migration
             ->constrained()
             ->onUpdate('cascade')
             ->onDelete('cascade');
+            $table->unsignedBigInteger('colour_id');
+            $table->foreign('colour_id')->references('id')->on('colours')
+            ->constrained()
+            ->onUpdate('cascade')
+            ->onDelete('cascade');
             $table->timestamps();
         });
     }

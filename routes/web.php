@@ -22,6 +22,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::get('/products', [App\Http\Controllers\ProductController::class, 'index'])->name('products');
-//Route::resource('/products', ProductController::class)->names('products');
+//Route::get('/products', [App\Http\Controllers\ProductController::class, 'index'])->name('products');
+Route::resource('/products', ProductController::class)->names('products');
+Route::post('/productimage', [App\Http\Controllers\ProductController::class, 'saveImage']);//->name('poductimage');
 
