@@ -21,18 +21,25 @@
                 
                 <tr>
                     <th scope="col">#</th>
-                    <th scope="col">First</th>
-                    <th scope="col">Last</th>
-                    <th scope="col">Handle</th>
+                    <th scope="col">Producto</th>
+                    <th scope="col">Descripcion</th>
+                    <th scope="col">Tipo</th>
+                    <th scope="col">Color</th>
+                    <th scope="col">Precio</th>
+                    
                 </tr>
             </thead>
             <tbody>
+            <div>LISTA DE PRODUCTOS (INVENTARIO)</div>
             @foreach($products as $product)
                 <tr>
                     <th scope="row">1</th>
                     <td>{{$product->product}}</td>
                     <td>{{$product->description}}</td>
                     <td>{{$product->type}}</td>
+                    <td>{{$product->colour}}</td>
+                    <td>{{$product->prize}}</td>
+         
                 </tr>
                 @endforeach
             </tbody>
