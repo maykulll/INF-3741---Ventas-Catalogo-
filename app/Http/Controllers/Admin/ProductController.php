@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Colour;
 use App\Models\Image;
 use App\Models\Product;
@@ -32,7 +33,7 @@ class ProductController extends Controller
                     'type',
                 )
             );
-        return view('products.index',compact('products')); //->with('info','Bienvenidos a la session de productos');
+        return view('admin.products.index',compact('products')); //->with('info','Bienvenidos a la session de productos');
     }
 
     /**
@@ -43,7 +44,7 @@ class ProductController extends Controller
     public function create()
     {
         $colours = Colour::orderBy('id', 'desc')->get();
-        return view('products.create', compact('colours'));
+        return view('admin.products.create', compact('colours'));
     }
 
     /**

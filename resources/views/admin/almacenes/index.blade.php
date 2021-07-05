@@ -1,4 +1,10 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Almacen')
+
+@section('content_header')
+    <h1>Almacenes</h1>
+@stop
 
 @section('content')
 
@@ -13,7 +19,7 @@
 
 <div class="card">
     <div class="card-header">
-        <a class="btn btn-success" href="{{route('products.create')}}"><i class="fas fa-fw fa-plus"></i> Nuevo</a>
+        <a class="btn btn-primary" href="{{route('products.create')}}"><i class="fas fa-fw fa-plus"></i> Nuevo</a>
     </div>
     <div class="card-body">
         <table class="table">
@@ -26,11 +32,13 @@
                     <th scope="col">Tipo</th>
                     <th scope="col">Color</th>
                     <th scope="col">Precio</th>
+                    <th scope="col">Cantidad</th>
                     
                 </tr>
             </thead>
             <tbody>
             <div>LISTA DE PRODUCTOS (INVENTARIO)</div>
+            
             @foreach($products as $product)
                 <tr>
                     <th scope="row">1</th>
@@ -39,6 +47,7 @@
                     <td>{{$product->type}}</td>
                     <td>{{$product->colour}}</td>
                     <td>{{$product->prize}}</td>
+                    <td>{{$product->quantity}}</td>
          
                 </tr>
                 @endforeach
@@ -50,13 +59,12 @@
     </div>
 </div>
 
+@stop
 
-@endsection
 @section('css')
+    <link rel="stylesheet" href="/css/admin_custom.css">
+@stop
 
-@endsection
 @section('js')
-<script>
-    //alert('Mensaje de muestra de producto');
-</script>
-@endsection
+    
+@stop

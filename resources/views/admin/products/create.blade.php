@@ -1,7 +1,12 @@
-@extends('layouts.app')
+@extends('adminlte::page')
+
+@section('title', 'Productos')
+
+@section('content_header')
+    <h1>Crear producto</h1>
+@stop
 
 @section('content')
-<h1>Crear producto </h1>
 <div class="card">
 
     <div class="card-body">
@@ -142,12 +147,13 @@
         </div>
     </div>
 </div>
+@stop
 
-
-@endsection
 @section('css')
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" />
-@endsection
+    <link rel="stylesheet" href="/css/admin_custom.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.css" />
+@stop
+
 @section('js')
 <script src="https://cdnjs.cloudflare.com/ajax/libs/croppie/2.6.5/croppie.min.js"></script>
 
@@ -183,7 +189,7 @@
                 size: 'viewport'
             }).then(function(response) {
                 $.ajax({
-                    url: "{{url('/productimage')}}",
+                    url: "{{url('/admin/productimage')}}",
                     type: 'POST',
                     data: {
                         '_token': $('meta[name="csrf-token"]').attr('content'),
@@ -204,5 +210,4 @@
 
     });
 </script>
-
-@endsection
+@stop
