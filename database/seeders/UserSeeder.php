@@ -21,13 +21,15 @@ class UserSeeder extends Seeder
             'name' => 'admin',
             'email' => 'admin@admin',
             'password' => Hash::make('asdfghjklñ'),
-            'role' => '1'
+            'role' => '1',
+            'urlimage' => 'user.png'
         ]);
         $usuario2 = User::create([
             'name' => 'cliente',
             'email' => 'cliente@cliente',
             'password' => Hash::make('asdfghjklñ'),
-            'role' => '3'
+            'role' => '3',
+            'urlimage' => 'user.png'
         ]);
         $verde = Colour::create([
             'colour' => 'Verde'
