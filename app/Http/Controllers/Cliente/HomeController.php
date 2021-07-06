@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Cliente;
 
 use App\Http\Controllers\Controller;
+use App\Models\Order;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -38,5 +39,12 @@ class HomeController extends Controller
                 )
             );
         return view('cliente.home',compact('products'));
+    }
+    public function realizarPedido(Request $request){
+        $pedido = Order::create([
+            'address' => $request->address,
+            'state' => 'pendiente',
+            'client_id' =>auth()->user()->id,                        
+        ]);
     }
 }

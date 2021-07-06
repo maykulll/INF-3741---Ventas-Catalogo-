@@ -5,3 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [App\Http\Controllers\Cliente\HomeController::class, 'index'])->name('cliente.home');
 Route::resource('/productos', ProductoController::class)->names('cliente.producto');
+Route::post('realizarpedido',[App\Http\Controllers\Cliente\HomeController::class, 'realizarPedido'])->name('cliente.realizarpedido');
