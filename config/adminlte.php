@@ -260,7 +260,7 @@ return [
         [
             'text' => 'Almacen',
             'route'  => 'admin.almacen.index',
-            'icon' => 'fas fa-fw fa-user',
+            'icon' => 'fas fa-fw fa-book',
         ],
         ['header' => 'VENTAS'],
         [
@@ -268,11 +268,7 @@ return [
             'route'  => 'admin.venta.index',
             'icon' => 'fas fa-fw fa-table',
         ],
-        [
-            'text' => 'Detalle de ventas',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
+       
         ['header' => 'PEDIDOS'],
         [
             'text' => ' Pedidos',
