@@ -64,7 +64,7 @@
                                 <label for="Cantidad">Cantidad</label>
                                 <input class="form-control" value="1" name="quantity" type="number" id="cantidad" required>
                             </div>
-                            <input type="text" name="product_id" id="producto_id">
+                            <input type="text" name="product_id" id="producto_id" hidden>
                             <div class="form-group ">
                                 <div class="">
                                     <button type="submit" class="btn btn-primary ">Realizar pedido</button>

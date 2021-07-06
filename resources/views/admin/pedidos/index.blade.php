@@ -19,7 +19,7 @@
 
 <div class="card">
     <div class="card-header">
-        <a class="btn btn-primary" href="{{route('products.create')}}"><i class="fas fa-fw fa-plus"></i> Nuevo</a>
+        
     </div>
     <div class="card-body">
         <table class="table">
@@ -44,7 +44,7 @@
                     
                     <td>{{$pedido->address}}</td>
                     <td>{{$pedido->state}}</td>
-                    <td>{{$pedido->client_id}}</td>
+                    <td>{{$pedido->name}}</td>
                     
                     
          

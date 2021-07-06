@@ -15,7 +15,15 @@ class PedidoController extends Controller
      */
     public function index()
     {
-        $orders = DB::table('orders') ->get();
+        $orders = DB::table('orders')
+        ->join('users','orders.client_id', '=', 'users.id')
+        ->get(array(
+                'orders.id',
+                'address',
+                'state',
+                'name',
+            )
+        );
         
         return view('admin.pedidos.index',compact('orders'));
     }
