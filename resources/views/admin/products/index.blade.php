@@ -28,7 +28,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Producto</th>
-                    
+                    <th scope="col">Imagen</th>
                     <th scope="col">Descripcion</th>
                     <th scope="col">Tipo</th>
                     <th scope="col">Color</th>
@@ -42,12 +42,13 @@
                 <tr>
                     <th scope="row">{{$product->id}}</th>
                     <td>{{$product->product}}</td>
-                    
+                    <td><img src="{{ asset ('/storage/products/'.$product->imageurl)}}" width="40" class="rounded-square" alt=""></td>
                     <td>{{$product->description}}</td>
                     <td>{{$product->type}}</td>
                     <td>{{$product->colour}}</td>
                     <td>{{$product->prize}}</td>
-         
+                    
+
                 </tr>
                 @endforeach
             </tbody>

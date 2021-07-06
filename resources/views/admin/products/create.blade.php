@@ -84,7 +84,7 @@
                         </div>
                         <div class="card-body">
                             <input type="file" name="before_crop_image" id="before_crop_image" accept="image/*" />
-                            <img id="idimag" class="profile-user-img img-fluid" src="https://images.unsplash.com/photo-1542261777448-23d2a287091c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" alt="User profile picture">
+                            <img id="idimag" class="" height="300" width="300" src="https://images.unsplash.com/photo-1542261777448-23d2a287091c?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MTR8fHxlbnwwfHx8&auto=format&fit=crop&w=500&q=60" alt="User profile picture">
                         </div>
 
                     </div>
@@ -163,12 +163,12 @@
             enableExif: true,
             viewport: {
                 width: 300,
-                height: 200,
+                height: 300,
                 type: 'square' //circle o square
             },
             boundary: {
                 width: 400,
-                height: 300
+                height: 400
             }
         });
         $('#before_crop_image').on('change', function() {
