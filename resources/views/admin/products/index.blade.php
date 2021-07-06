@@ -28,6 +28,7 @@
                 <tr>
                     <th scope="col">#</th>
                     <th scope="col">Producto</th>
+                    
                     <th scope="col">Descripcion</th>
                     <th scope="col">Tipo</th>
                     <th scope="col">Color</th>
@@ -41,6 +42,7 @@
                 <tr>
                     <th scope="row">{{$product->id}}</th>
                     <td>{{$product->product}}</td>
+                    
                     <td>{{$product->description}}</td>
                     <td>{{$product->type}}</td>
                     <td>{{$product->colour}}</td>

@@ -282,7 +282,7 @@ return [
         ['header' => 'SISTEMA'],
         [
             'text' => ' Usuarios',
-            'url'  => 'admin/settings',
+            'route'  => 'admin.usuario.index',
             'icon' => 'fas fa-fw fa-users',
         ],
        /*  [
